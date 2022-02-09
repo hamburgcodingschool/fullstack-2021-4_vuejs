@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #labelCounter {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="labelCounter">0</div>
+    <button id="downButton">GO DOWN</button>
+    <button id="upButton">GO UP</button>
+    
+
+    <script>
+        let counter = 5;
+
+        const labelCounter = document.querySelector("#labelCounter");
+        const upButton = document.querySelector("#upButton");
+        const downButton = document.querySelector("#downButton");
+
+        labelCounter.innerHTML = counter;
+
+        upButton.addEventListener("click", function() {
+            counter++;
+            labelCounter.innerHTML = counter;
+        });
+
+        downButton.addEventListener("click", function() {
+            counter--;
+            labelCounter.innerHTML = counter;
+        });
+
+    </script>
+</body>
+</html>
