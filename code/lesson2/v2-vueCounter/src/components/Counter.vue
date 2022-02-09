@@ -1,5 +1,6 @@
 <template>
     <div>{{counter}}</div>
+    <button @click="clickedGoDown">GO DOWN</button>
     <button @click="clickedGoUp">GO UP</button>
 </template>
 
@@ -7,8 +8,11 @@
 export default {
     methods: {
         clickedGoUp() {
-            this.counter ++;
-        }
+            this.counter *= 2;
+        },
+        clickedGoDown() {
+            this.counter /= 2;
+        },
     },
     data: function() {
         return {

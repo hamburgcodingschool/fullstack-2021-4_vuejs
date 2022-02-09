@@ -16,6 +16,7 @@
     <button id="downButton">GO DOWN</button>
     <button id="upButton">GO UP</button>
     
+    <input id="mySlider" type="range" min="0" max="100">
 
     <script>
         let counter = 5;
@@ -23,6 +24,7 @@
         const labelCounter = document.querySelector("#labelCounter");
         const upButton = document.querySelector("#upButton");
         const downButton = document.querySelector("#downButton");
+        const mySlider = document.querySelector("#mySlider");
 
         labelCounter.innerHTML = counter;
 
@@ -34,6 +36,10 @@
         downButton.addEventListener("click", function() {
             counter--;
             labelCounter.innerHTML = counter;
+        });
+
+        mySlider.addEventListener("change", function(event) {
+            console.log(event.target.value);
         });
 
     </script>
