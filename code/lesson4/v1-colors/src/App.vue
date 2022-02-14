@@ -16,21 +16,32 @@ export default {
   },
   data: function() {
     return {
-      colorData: [
-        "red",
-        "green",
-        "blue",
-        "#FF0",
-        "#F0F",
-        "#0FF"
-      ],
-      selectedColor: "red"
+      colorData: [],
+      selectedColor: undefined
     }
   },
   methods: {
     clickedCircle(color) {
       this.selectedColor = color;
     }
+  },
+  mounted() {
+    // HOMEWORK
+    // Make sure this is understood bring questions :D
+
+    // Create an array of random Colors :D
+
+    this.colorData = [
+        "azure",
+        "lime",
+        "red",
+        "green",
+        "blue",
+        "#FF0",
+        "#F0F",
+        "#0FF"
+    ]
+    this.selectedColor = this.colorData[0]
   }
 }
 
