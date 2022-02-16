@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // (5 -> 20)
+
+        // function randomStuff() {
+        //     let x = Math.random(); // [0->0.9999999999]
+        //     x = x * 16;   //    0 -> 15
+        //     x = Math.floor(x);
+        //     x += 5;     //  5 -> 20
+        //     console.log(x);
+        // }
+
+        // function randomInt(min, max) {
+        //     let x = Math.random();
+        //     x = x * (max - min + 1);
+        //     x = Math.floor(x);
+        //     x += min;
+        //     console.log(x);
+        // }
+
+        // for (let i = 0; i < 1000; i++) {
+        //     console.log(randomInt(1, 3));
+        // }
+        
+        // RED (0->255)
+        // GREEN (0->255)
+        // BLUE (0->255)
+
+        // let color = randomInt(0, 16777215);
+        // console.log(color.toString(16));
+
+        function randomInt(min, max) {
+           return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function randomColor() {
+            const sample = "0123456789ABCDEF";
+            let newColor = "#";
+            for (let i = 0; i < 6; i++) {
+                const randomIndex = randomInt(0, 15);
+                newColor += sample[randomIndex];
+            }
+            return newColor;
+        }
+
+        function createRandomColorArray(size) {
+            const colorArray = [];
+            for (let i = 0; i < size; i++) {
+                colorArray[i] = randomColor();
+            }
+            return colorArray;
+        }
+        
+        const colors = createRandomColorArray(2);
+        console.log(colors);
+        
+
+
+    </script>
+</body>
+</html>

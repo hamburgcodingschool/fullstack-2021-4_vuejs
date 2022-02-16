@@ -6,8 +6,10 @@
 </template>
 
 <script>
+
 import ColorList from "./components/ColorList.vue";
 import ColorPreview from "./components/ColorPreview.vue";
+import RandomColor from "./utilities/RandomColor";
 
 export default {
   components: {
@@ -26,22 +28,24 @@ export default {
     }
   },
   mounted() {
+
     // HOMEWORK
     // Make sure this is understood bring questions :D
 
     // Create an array of random Colors :D
 
-    this.colorData = [
-        "azure",
-        "lime",
-        "red",
-        "green",
-        "blue",
-        "#FF0",
-        "#F0F",
-        "#0FF"
-    ]
-    this.selectedColor = this.colorData[0]
+    // this.colorData = [
+    //     "azure",
+    //     "lime",
+    //     "red",
+    //     "green",
+    //     "blue",
+    //     "#FF0",
+    //     "#F0F",
+    //     "#0FF"
+    // ]
+    this.colorData = RandomColor.createRandomColorArray(10);
+    this.selectedColor = this.colorData[0];
   }
 }
 
