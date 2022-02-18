@@ -2,10 +2,11 @@
     <div class="detail">
         <h3>{{ pokemon.name }}</h3>
         <h3>{{ pokemon.url }}</h3>
-        <h3>{{ pokemonDetails.height }}</h3>
-        <h3>{{ pokemonDetails.weight }}</h3>
-        <h3>{{ pokemonDetails.name }}</h3>
-        <h3>{{ pokemonDetails.sprites?.other["official-artwork"].front_default }}</h3>
+        <h2>Details</h2>
+        <h3>Height: {{ pokemonDetails.height }}</h3>
+        <h3>Weight: {{ pokemonDetails.weight }}</h3>
+        <h3>Name: {{ pokemonDetails.name }}</h3>
+        <h3>Image Source: {{ pokemonDetails.sprites?.other["official-artwork"].front_default }}</h3>
         <img :src="pokemonDetails.sprites?.other['official-artwork'].front_default" >
     </div>
 </template>

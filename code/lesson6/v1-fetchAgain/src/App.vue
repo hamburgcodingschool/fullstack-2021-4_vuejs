@@ -23,10 +23,17 @@ export default {
   },
   methods: {
     clickedLink(value) {
+
       this.selectedPokemon = value;
     }
   }
 }
+
+// HOMEWORK:
+// use SWAPI.dev (Star Wars API)
+//
+// Create a List of All Star Wars Movies
+// When clicking a Movie show the Character and Actor names of the cast members
 </script>
 
 <style scoped>
