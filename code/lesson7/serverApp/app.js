@@ -1,14 +1,17 @@
 const express = require("express");
+const cors = require("cors");
+
 const mockData = require("./mockData.json");
 
 const app = express();
-const port = 3000;
+const port = 8080;
 
 app.use(express.json());
+app.use(cors());
 
 app.get("/", function(req, res) {
 
-    console.log(req);
+    // console.log(req);
 
     res.json(mockData);
 });
