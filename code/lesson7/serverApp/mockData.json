@@ -1,0 +1,23 @@
+[
+    {
+        "title": "The Lord of the Rings",
+        "author": "Tolkien",
+        "description": "",
+        "publishingDate": null,
+        "type": "hardcover"
+    },
+    {
+        "title": "Hitchhiker's Guide to The Galaxy",
+        "author": "Douglas Adams",
+        "description": "",
+        "publishingDate": null,
+        "type": "paperback"
+    },
+    {
+        "title": "Harry Potter and the Philosopher's Stone",
+        "author": "J.K. Rowling",
+        "description": "",
+        "publishingDate": null,
+        "type": "paperback"
+    }
+]
