@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import booksApi from "../services/booksAPI";
+
 export default {
     data: function() {
         return {
@@ -26,14 +28,8 @@ export default {
     },
     created: async function() {
         // alert("CREATED, LET's FETCH!");
-        const url = "http://localhost:8080/";
-        const response = await fetch(url);
-        const result = await response.json();
-
-        this.books = result;
-
-        // console.log(result);
-
+        
+        this.books = await booksApi.getAllBooks();
     },
     mounted: function() {
         // alert("NOW ITS MOUNTED TOO");
